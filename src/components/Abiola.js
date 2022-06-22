@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import styled from "styled-component";
+import styled from "styled-components";
 function Abiola() {
   return (
+    //
     <Card>
       <Image>
         <img src="" alt=""></img>
@@ -9,12 +10,16 @@ function Abiola() {
 
       <CardTitle className="card-title">
         <h3>Oluwadamilare Abiola</h3>
-        <h6>Front-end developer</h6>
+        <h5>Front-end developer</h5>
       </CardTitle>
 
       <Contact className="contact-me">
-        <span>..</span> <p>damzealwini7@gmail.com</p>
-        <span>..</span> <p>(+234) 546 624 342</p>
+        <p>
+          <span>..</span>damzealwini7@gmail.com
+        </p>
+        <p>
+          <span>..</span>(+234) 546 624 342
+        </p>
       </Contact>
 
       <CardBody>
@@ -28,22 +33,33 @@ function Abiola() {
 export default Abiola;
 
 const Card = styled.div`
-  background: #bececc
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #bececc;
   padding: 3px 2px;
-  width: 100px;
 `;
 
 const Image = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
 `;
 
 const CardTitle = styled.div`
-  margin-top: 30px;
+  margin-top: 25px;
+  text-align: center;
+  border: 2px solid red;
 `;
 
 const Contact = styled.div`
-  margin-top: 10px;
+  margin-top: 8px;
+  border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 5px;
+  justify-content: center;
 `;
 
 const CardBody = styled.p`
