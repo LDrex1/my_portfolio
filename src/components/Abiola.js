@@ -1,31 +1,36 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import myself from "../images/ME.png";
+import Skills from "./Skills";
+
+// const myself = require("../images/ME.png");
 function Abiola() {
   return (
     //
-    <Card>
+    <Card className="personal">
       <Image>
-        <img src="" alt=""></img>
+        {/* <img src={myself} style={{ width: "100px" }} alt="ME:)"></img> */}
       </Image>
 
-      <CardTitle className="card-title">
-        <h3>Oluwadamilare Abiola</h3>
-        <h5>Front-end developer</h5>
-      </CardTitle>
-
-      <Contact className="contact-me">
-        <p>
-          <span>..</span>damzealwini7@gmail.com
-        </p>
-        <p>
-          <span>..</span>(+234) 546 624 342
-        </p>
-      </Contact>
-
-      <CardBody>
-        self-motivated developer, who is willing to learn and create outstanding
-        UI applications.
-      </CardBody>
+      <div>
+        <CardTitle className="card-title">
+          <h3>Oluwadamilare Abiola</h3>
+          <h5>Front-end developer</h5>
+        </CardTitle>
+        <Contact className="contact-me">
+          <p>
+            <span>..</span>damzealwini7@gmail.com
+          </p>
+          <p>
+            <span>..</span>(+234) 546 624 342
+          </p>
+        </Contact>
+        <CardBody>
+          self-motivated developer, who is willing to learn and create
+          outstanding UI applications.
+        </CardBody>
+        <Skills />
+      </div>
     </Card>
   );
 }
@@ -35,19 +40,22 @@ export default Abiola;
 const Card = styled.div`
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background: #bececc;
-  padding: 3px 2px;
+  background: #1a052e;
+  justify-content: space-between;
+  color: white;
+  padding-right: 5vw;
 `;
 
 const Image = styled.div`
-  width: 100px;
-  height: 100px;
+  background-image: url(${myself});
+  background-size: cover;
+  background-position: 100% 23%;
+  width: 40vw;
+  height: 49vh;
 `;
 
 const CardTitle = styled.div`
-  margin-top: 25px;
   text-align: center;
   border: 2px solid red;
 `;
