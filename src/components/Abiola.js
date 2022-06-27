@@ -39,7 +39,7 @@ export default Abiola;
 
 const Card = styled.div`
   height: 100vh;
-  display: flex;
+  //   display: flex;
   align-items: center;
   background: #1a052e;
   justify-content: space-between;
@@ -51,8 +51,10 @@ const Image = styled.div`
   background-image: url(${myself});
   background-size: cover;
   background-position: 100% 23%;
-  width: 40vw;
-  height: 49vh;
+  width: 90vw;
+  //   height: 49vh;
+  height: 40vh;
+  margin: auto;
 `;
 
 const CardTitle = styled.div`
