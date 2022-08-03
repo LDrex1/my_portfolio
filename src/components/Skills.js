@@ -4,7 +4,7 @@ import styled from "styled-components";
 const allSkills = [
   {
     skill: "React",
-    img: require("../images/react-logo.jpg"),
+    img: require("../images/react-logo.png"),
   },
   {
     skill: "JavaScript",
@@ -12,7 +12,7 @@ const allSkills = [
   },
   {
     skill: "Bootstrap",
-    img: require("../images/javaScript-logo.png"),
+    img: require("../images/bootstrap.png"),
   },
   {
     skill: "SCSS",
@@ -20,16 +20,17 @@ const allSkills = [
   },
   {
     skill: "CSS",
-    img: require("../images/css-logo.jpg"),
+    img: require("../images/css-logo.png"),
   },
   {
     skill: "html",
-    img: require("../images/html-logo.jpg"),
+    img: require("../images/html-logo.png"),
   },
 ];
 function Skills() {
   return (
-    <Container>
+    <Container className="container">
+      <Header>Skills</Header>
       <UnorderedLi>
         {allSkills.map((skill) => (
           <List className={skill.skill}>
@@ -48,12 +49,22 @@ export default Skills;
 const Container = styled.section`
   margin-top: 20px;
 `;
+//
+
+const Header = styled.h3`
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+`;
 
 const UnorderedLi = styled.ul`
   display: flex;
   list-style: none;
   column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
+  //   justify-content: space-around;
 `;
 
 //
@@ -68,6 +79,7 @@ const Label = styled.p`
 //
 const Image = styled.div`
   background: url(${(props) => props.background}) no-repeat center/cover;
+  // mix-blend-mode: multiply;
   margin-right: auto;
   margin-left: auto;
   width: 60px;
