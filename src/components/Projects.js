@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { keyframes, css } from "styled-components";
-
+import { device } from "./Device";
 //
+
+/**
+ * Data Containing information on all the projects
+ */
 const sites = [
   {
     name: "finsweet",
-    image: require("../images/cfuf.png"),
+    image: require("../images/finsweet.png"),
     links: {
-      live: "https://ldrex1.github.io/CSUF/",
-      gitHub: "https://github.com/LDrex1/CSUF",
+      live: "https://ldrex1.github.io/mechanic/",
+      gitHub: "https://github.com/LDrex1/mechanic",
     },
     about:
       "A multipage website on an automobile repair company. All pages are fully responsive.",
@@ -39,7 +43,7 @@ const sites = [
   },
   {
     name: "Utopia",
-    image: require("../images/cfuf.png"),
+    image: require("../images/utopia.png"),
     links: {
       live: "https://ldrex1.github.io/countriesInfo/",
       gitHub: "https://github.com/LDrex1/countriesInfo",
@@ -52,10 +56,23 @@ const sites = [
 ];
 //
 
+/**
+ *
+ * @returns a fragment that is the result of mapping the "sites AoO"..
+ *
+ */
 function Projects() {
+  /**
+   * UseState fot the "splitToggle" button
+   */
   const [isActive, setIsActive] = useState({});
   //
   console.log(isActive);
+  /**
+   *
+   * @param {*} index
+   * @returns the opposite value of the curretn (isActive) based on the index of the element
+   */
   const splitToggle = (index) => () => {
     setIsActive((current) => ({ ...current, [index]: !current[index] }));
   };
@@ -63,6 +80,9 @@ function Projects() {
   return (
     <>
       {sites.map((project, index) => {
+        /**
+         * Destructuring the links in (Sites)
+         */
         const { live, gitHub } = project.links;
         return (
           <Work>
@@ -75,6 +95,8 @@ function Projects() {
               <Mask toogle={isActive}></Mask>
               <ResourcesDup>{project.resources.join(" ")}</ResourcesDup>
             </SiteImage>
+            {/*  */}
+
             <About className={"about-" + project.name} toogle={isActive[index]}>
               <Resources>{project.resources.join(" ")}</Resources>
               <AboutPar>{project.about}</AboutPar>
@@ -95,15 +117,20 @@ function Projects() {
 export default Projects;
 //
 
+/** Styles for all the Classes */
 const Work = styled.div`
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 2px solid white;
+  padding-left: 8px;
 
-  //   color: white;
+  @media ${device.mobileL} {
+    flex-direction: row;
+  }
 `;
 //
 
@@ -118,54 +145,52 @@ const Mask = styled.div`
 `;
 //
 
-const showAbout = keyframes`
+/**Animation to show the the "About" Class */
+const showAbout = (marginDir) => keyframes`
 0%{
-        height:  1px ;
-        "margin-top": 0 ;
+  flex:0;
+        max-height: 1px;
+        ${marginDir}: 0;
         padding: 0; 
-    
-   
 }
 
 40%{
-    
-        height: 1px;      
-        margin-top: -30px ;
+        max-height: 1px;      
+        ${marginDir}: -30px;
         padding: 0;   
 }
 
 100%{
-   
-        height:  250px ;
-        "margin-top": -30px;
+  flex:1;
+
+        max-height: 300px;
+        ${marginDir}: -30px;
         padding: 8px 0;
-    
 }
+
 
 `;
 //
 
-const hideAbout = keyframes`
+/**Animation to hide the the "About" Class */
+
+const hideAbout = (marginDir) => keyframes`
 0%{
-    height:  250px;
-    margin-top:0px;
+    max-height:  400px;
+   ${marginDir}:-30px;
     padding: 8px 0;
-
-
 }
 
 40%{
-
-     height:  1px;
-     margin-top: -30px;
+     max-height:  1px;
+     ${marginDir}: -30px;
      padding: 0;
-  
 }
 
 100%{
-
-    height: 1px;
-    margin-top: 0;
+  flex:0;
+    max-height: 1px;
+    ${marginDir}: 0;
     padding:0;
 
 }
@@ -173,20 +198,39 @@ const hideAbout = keyframes`
 `;
 //
 
-const About = styled.div`
-  ${(props) => {
-    return {
-      height: !props.toogle ? "1px" : "250px",
-      "margin-top": !props.toogle ? "0" : "-30px",
-      padding: !props.toogle ? "0" : "8px 0",
-    };
-  }};
+/**
+ * Animation for the site image
+ */
+const shrinkImage = keyframes`
+  0%{
+    flex: 0.5;
+  }
+  40%{
 
+  }
+  100%{
+    flex: 0.9
+  }
+ `;
+const increaseImage = keyframes`
+ 0%{
+   flex: 0.9;
+ }
+ 40%{
+    
+}
+ 100%{
+   flex: 0.5;
+ }
+`;
+
+const About = styled.div`
+  border-left: 5px solid #b35900;
   width: 100%;
-  background: white;
+  background: linear-gradient(#ffb566, #ffcc99);
   hyphens: auto;
   text-align: start;
-  color: black;
+  color: #b35900;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -195,13 +239,25 @@ const About = styled.div`
   animation: ${(props) =>
     props.toogle
       ? css`
-          ${hideAbout} 1s linear forwards
+          ${showAbout("margin-top")} 1s linear forwards
         `
       : css`
-          ${showAbout} 1s linear forwards
+          ${hideAbout("margin-top")} 1s linear forwards
         `};
-`;
+  // position: relative;
 
+  @media ${device.mobileL} {
+    flex: 1;
+    animation: ${(props) =>
+      props.toogle
+        ? css`
+            ${showAbout("margin-left")} 1s linear forwards
+          `
+        : css`
+            ${hideAbout("margin-left")} 1s linear forwards
+          `};
+  }
+`;
 //
 
 const AboutPar = styled.p`
@@ -211,7 +267,7 @@ const AboutPar = styled.p`
 //
 const ResourcesDup = styled.p`
   text-align: center;
-  color: blue;
+  color: #e67700;
   visibility: hidden;
   font-size: 20px;
 `;
@@ -219,11 +275,12 @@ const ResourcesDup = styled.p`
 
 const Resources = styled.p`
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 `;
 //
 
 const Links = styled.div`
+  margin-top: 10px;
   text-align: start;
   display: flex;
   flex-direction: column;
@@ -248,16 +305,35 @@ const GithubLink = styled(LiveSite)``;
 //
 
 const SiteImage = styled.div`
-  background: url(${(props) => props.background}) no-repeat center/cover;
-  width: calc(80vw);
-  height: calc(80vw);
-  //   margin: auto;
+  background: url(${(props) => props.background}) no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+  width: 80vw;
+  aspect-ratio: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   //
+
+  @media ${device.mobileM} {
+    width: 65vw;
+  }
+  @media ${device.mobileL} {
+    // flex: 0.9;
+    // max-width: 85vh;
+    max-height: 85vh;
+    animation: ${(props) =>
+      props.toogle
+        ? css`
+            ${shrinkImage} 1s linear forwards
+          `
+        : css`
+            ${increaseImage} 1s linear forwards
+          `};
+    aspect-ratio: 1;
+  }
 
   &:hover ${Mask},&:hover > ${ResourcesDup}, &:hover ${Resources} {
     visibility: visible;
