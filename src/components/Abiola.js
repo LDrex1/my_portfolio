@@ -43,8 +43,8 @@ function Abiola() {
         </Contact>
         <MiniWrapper className="about">
           <CardBody>
-            self-motivated developer. Always and blank canvas and willing to
-            learn and create outstanding UI applications.
+            self-motivated developer and always willing to learn and create
+            outstanding UI applications.
           </CardBody>
           <Skills />
         </MiniWrapper>
