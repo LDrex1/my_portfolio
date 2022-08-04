@@ -125,7 +125,7 @@ const Work = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  // border: 2px solid white;
   padding-left: 8px;
 
   @media ${device.mobileL} {
