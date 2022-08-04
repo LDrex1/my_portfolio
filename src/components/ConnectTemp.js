@@ -15,7 +15,7 @@ function ConnectTemp() {
       </Paragraph>
 
       <MediaDiv>
-        <MediaGroup>
+        <MediaGroup id="contactMe">
           <FontAwesomeIcon
             icon={faLinkedin}
             size="2x"
@@ -41,18 +41,7 @@ function ConnectTemp() {
 export default ConnectTemp;
 //
 
-const Container = styled.div`
-  background: #1b1a1a;
-  color: #e1ac73;
-  min-height: 20vh;
-  padding: 1rem 0.6rem;
-
-  @media ${device.mobileL} {
-    // display: flex;
-    column-gap: 3vw;
-    align-items: center;
-  }
-`;
+const Container = styled.div``;
 
 const Paragraph = styled.p`
   @media ${device.mobileL} {
@@ -81,28 +70,3 @@ const MediaGroup = styled.div`
   justify-content: center;
   color: whitesmoke;
 `;
-
-const Media = styled.div`
-  width: 80vw;
-  border-radius: 3px;
-  margin: 0 auto;
-  height: calc(8px + 2.4vw);
-  min-height: 25px;
-  padding: 4px;
-  outline: none;
-  box-shadow: inset 0 0.08rem 0 0 #ffce99;
-
-  &:focus {
-    border: 1px solid #e1ac73;
-    box-shadow: inset 0 0 5px 0 #ffce99;
-  }
-
-  & + & {
-    margin-top: calc(5px + 1.2vw);
-  }
-
-  @media ${device.mobileL} {
-    width: 90%;
-  }
-`;
-//
