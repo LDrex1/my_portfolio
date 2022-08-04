@@ -16,7 +16,7 @@ const allSkills = [
   },
   {
     skill: "SCSS",
-    img: require("../images/javaScript-logo.png"),
+    img: require("../images/scss-logo.png"),
   },
   {
     skill: "CSS",
@@ -79,7 +79,7 @@ const Label = styled.p`
 //
 const Image = styled.div`
   background: url(${(props) => props.background}) no-repeat center/cover;
-  // mix-blend-mode: multiply;
+  mix-blend-mode: luminosity;
   margin-right: auto;
   margin-left: auto;
   width: 60px;
