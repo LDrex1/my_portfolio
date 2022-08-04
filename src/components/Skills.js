@@ -84,4 +84,8 @@ const Image = styled.div`
   margin-left: auto;
   width: 60px;
   height: 60px;
+
+  &:hover {
+    mix-blend-mode: overlay;
+  }
 `;
