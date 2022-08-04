@@ -280,10 +280,15 @@ const Resources = styled.p`
 //
 
 const Links = styled.div`
-  margin-top: 10px;
+  margin-top: auto;
+  margin-bottom: 2px;
   text-align: start;
   display: flex;
   flex-direction: column;
+
+  @media ${device.laptop} {
+    margin-top: 10px;
+  }
 `;
 //
 
