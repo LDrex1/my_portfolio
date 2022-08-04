@@ -10,8 +10,8 @@ function ConnectTemp() {
       <Paragraph>
         <Header>You like what you see?</Header>
         <br></br>
-        ...you can contact me on any of these platforms if you'd like to request
-        for my service or have a quick chat. I'll be waiting :{")"}.
+        ...contact me on any of these platforms if you'd like to request for my
+        service or have a quick chat. I'll be waiting :{")"}.
       </Paragraph>
 
       <MediaDiv>
