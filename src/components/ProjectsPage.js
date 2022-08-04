@@ -10,7 +10,7 @@ function ProjectsPage() {
   return (
     <Wrapper>
       <Header>MY PROJECTS</Header>
-      <SubHeader>Click each image to know more</SubHeader>
+      <SubHeader>Here are a few, click each image to know more</SubHeader>
       <Container>
         {/*  */}
         <Projects />
