@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { useRef } from "react";
 import styled from "styled-components";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 import myself from "../images/ME.png";
 import Skills from "./Skills";
 import { device } from "./Device";
@@ -11,7 +11,6 @@ function Abiola() {
   const lottieEmail = useRef();
 
   function mouseEnter() {
-    console.log("play");
     lottieEmail.current.play();
   }
 
@@ -26,7 +25,10 @@ function Abiola() {
           <Job>Front-end developer</Job>
         </CardTitle>
         <Contact className="contact-me">
-          <Email onMouseEnter={() => mouseEnter()}>
+          <Email
+            onClick={() => (window.location = "#contactMe")}
+            onMouseEnter={() => mouseEnter()}
+          >
             <Player
               ref={lottieEmail}
               autoplay={false}
