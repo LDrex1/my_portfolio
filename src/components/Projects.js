@@ -145,9 +145,10 @@ const Mask = styled.div`
   width: 100%;
   mix-blend-mode: multiply;
   visibility: hidden;
-  filter: blur(1px);
+  filter: blur(9px);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
-  outline: 10px solid transparent;
+  will-change: transform;
+  // outline: 10px solid transparent;
 `;
 //
 
