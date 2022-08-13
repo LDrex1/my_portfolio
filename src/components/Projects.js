@@ -120,7 +120,7 @@ export default Projects;
 /** Styles for all the Classes */
 const Work = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,6 +129,7 @@ const Work = styled.div`
   padding-left: 8px;
 
   @media ${device.mobileL} {
+    min-height: 100vh;
     flex-direction: row;
   }
 `;
