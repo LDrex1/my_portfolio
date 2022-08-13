@@ -146,6 +146,7 @@ const Mask = styled.div`
   mix-blend-mode: multiply;
   visibility: hidden;
   filter: blur(10px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 `;
 //
 
@@ -347,7 +348,6 @@ const SiteImage = styled.div`
     aspect-ratio: 1;
   }
   &:hover {
-    // filter: blur(4px);
     opacity: 0.9;
   }
   &:hover ${Mask},&:hover > ${ResourcesDup}, &:hover ${Resources} {
