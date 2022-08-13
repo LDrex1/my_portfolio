@@ -147,7 +147,7 @@ const Mask = styled.div`
   visibility: hidden;
   filter: blur(1px);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
-  outline: 2px solid transparent;
+  outline: 10px solid transparent;
 `;
 //
 
