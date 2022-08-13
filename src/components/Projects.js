@@ -145,8 +145,8 @@ const Mask = styled.div`
   width: 100%;
   mix-blend-mode: multiply;
   visibility: hidden;
-  filter: blur(10px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  filter: blur(8px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
   outline: 2px solid transparent;
 `;
 //
