@@ -126,9 +126,11 @@ const Work = styled.div`
   justify-content: center;
   align-items: center;
   // border: 2px solid white;
-  padding-left: 8px;
+  padding: 15px 0 15px 8px;
 
   @media ${device.mobileL} {
+    padding: 0;
+    padding-left: 8px;
     min-height: 100vh;
     flex-direction: row;
   }
@@ -136,13 +138,14 @@ const Work = styled.div`
 //
 
 const Mask = styled.div`
-  background: grey;
+  background: #4d4d4d;
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
   mix-blend-mode: multiply;
   visibility: hidden;
+  filter: blur(10px);
 `;
 //
 
@@ -271,6 +274,7 @@ const ResourcesDup = styled.p`
   color: #e67700;
   visibility: hidden;
   font-size: 20px;
+  z-index: 2;
 `;
 //
 
@@ -340,7 +344,10 @@ const SiteImage = styled.div`
           `};
     aspect-ratio: 1;
   }
-
+  &:hover {
+    // filter: blur(4px);
+    opacity: 0.9;
+  }
   &:hover ${Mask},&:hover > ${ResourcesDup}, &:hover ${Resources} {
     visibility: visible;
   }
