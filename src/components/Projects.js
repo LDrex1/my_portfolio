@@ -326,7 +326,7 @@ const SiteImage = styled.div`
   justify-content: center;
   position: relative;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-  // outline: 1px solid transparent;
+  outline: 2px solid red;
   //
 
   @media ${device.mobileM} {
