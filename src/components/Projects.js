@@ -147,6 +147,7 @@ const Mask = styled.div`
   visibility: hidden;
   filter: blur(10px);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  outline: 2px solid transparent;
 `;
 //
 
@@ -327,7 +328,7 @@ const SiteImage = styled.div`
   justify-content: center;
   position: relative;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-  outline: 2px solid red;
+  // outline: 2px solid red;
   //
 
   @media ${device.mobileM} {
