@@ -325,6 +325,8 @@ const SiteImage = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  // outline: 1px solid transparent;
   //
 
   @media ${device.mobileM} {
