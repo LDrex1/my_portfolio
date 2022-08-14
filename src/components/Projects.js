@@ -92,8 +92,10 @@ function Projects() {
               background={project.image}
               onClick={splitToggle(index)}
             >
-              <Mask toogle={isActive}></Mask>
-              <ResourcesDup>{project.resources.join(" ")}</ResourcesDup>
+              <Mask></Mask>
+              <ResourcesDup toogle={isActive[index]}>
+                {project.resources.join(" ")}
+              </ResourcesDup>
             </SiteImage>
             {/*  */}
 
@@ -148,7 +150,6 @@ const Mask = styled.div`
   filter: blur(9px);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
   will-change: transform;
-  // outline: 10px solid transparent;
 `;
 //
 
@@ -278,6 +279,7 @@ const ResourcesDup = styled.p`
   visibility: hidden;
   font-size: 20px;
   z-index: 2;
+  display: ${(props) => (props.toogle ? "none" : "block")};
 `;
 //
 
