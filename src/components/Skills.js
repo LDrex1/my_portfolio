@@ -11,6 +11,10 @@ const allSkills = [
     img: require("../images/javaScript-logo.png"),
   },
   {
+    skill: "Firebase",
+    img: require("../images/firebase-logo.png"),
+  },
+  {
     skill: "Bootstrap",
     img: require("../images/bootstrap.png"),
   },
