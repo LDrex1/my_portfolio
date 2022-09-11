@@ -29,19 +29,19 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
-h4 {
+/* h4 {
 }
 h5 {
 }
 h6 {
-}
+} */
 p {
   font-size: 1.2rem;
 }
-input[text] {
+/* input[text] {
 }
 input[textarea] {
-}
+} */
 
 @media screen and (min-width: 598px) {
   h1 {
@@ -53,10 +53,10 @@ input[textarea] {
   h3 {
     font-size: 1.8rem;
   }
-  h4 {
+  /* h4 {
   }
   h5 {
-  }
+  } */
   p {
     font-size: 1.2rem;
   }
