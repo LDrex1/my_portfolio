@@ -7,6 +7,10 @@ const allSkills = [
     img: require("../images/react-logo.png"),
   },
   {
+    skill: "Three.js",
+    img: require("../images/threeJs-logo.png"),
+  },
+  {
     skill: "JavaScript",
     img: require("../images/javaScript-logo.png"),
   },
