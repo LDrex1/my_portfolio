@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { keyframes, css } from "styled-components";
 import { device } from "./Device";
 import { sites } from "./ProjectsData";
+import { CursorContext } from "./providers/CursorContextProvider";
 //
 
 /**
@@ -15,6 +16,8 @@ function Projects() {
    * UseState fot the "splitToggle" button
    */
   const [isActive, setIsActive] = useState({});
+
+  const { setCursorType } = useContext(CursorContext);
   //
   console.log(isActive);
   /**
@@ -24,6 +27,14 @@ function Projects() {
    */
   const splitToggle = (index) => () => {
     setIsActive((current) => ({ ...current, [index]: !current[index] }));
+  };
+
+  const handleMouseEnter = () => {
+    console.log("first");
+    setCursorType("work");
+  };
+  const handleMouseLeave = () => {
+    setCursorType("");
   };
 
   return (
@@ -40,6 +51,8 @@ function Projects() {
               toogle={isActive}
               background={project.image}
               onClick={splitToggle(index)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               <Mask></Mask>
               <ResourcesDup toogle={isActive[index]}>
@@ -70,13 +83,14 @@ export default Projects;
 
 /** Styles for all the Classes */
 const Work = styled.div`
+  background: radial-gradient(white 10%, #ffcc99 75%, chocolate 85%);
+  border-radius: 30px;
   width: 100%;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // border: 2px solid white;
   padding: 15px 0 15px 8px;
 
   @media ${device.mobileL} {
@@ -120,7 +134,7 @@ const showAbout = (marginDir) => keyframes`
 100%{
   flex:1;
 
-        max-height: 300px;
+        max-height: 400px;
         ${marginDir}: -30px;
         padding: 8px 0;
 }
