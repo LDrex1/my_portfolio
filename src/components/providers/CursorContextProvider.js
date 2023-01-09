@@ -41,7 +41,7 @@ export default CursorContextProvider;
 
 const Div = styled("span")`
   z-index: 3;
-  pointer-evens: none;
+  pointer-events: none;
   border-radius: 50%;
   background: #666666;
   width: 8px;
@@ -59,8 +59,9 @@ const DivAbs = styled(Div)`
   align-items: center;
   width: 20px;
   height: 20px;
-  -webkit-transition-duration: 200ms;
-  transition-duration: 200ms;
+  -webkit-transition-duration: 90ms;
+  transition-duration: 90ms;
+  transition-delay: 0ms;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   will-change: width, height, transform, border;
