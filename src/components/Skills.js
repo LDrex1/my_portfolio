@@ -40,10 +40,10 @@ function Skills() {
     <Container className="container">
       <Header>Skills</Header>
       <UnorderedLi>
-        {allSkills.map((skill) => (
-          <List className={skill.skill}>
-            <Image background={skill.img}></Image>
-            <Label>{skill.skill}</Label>
+        {allSkills.map(({ skill, img }) => (
+          <List className={skill}>
+            <Image background={img}></Image>
+            <Label>{skill}</Label>
           </List>
         ))}
       </UnorderedLi>
