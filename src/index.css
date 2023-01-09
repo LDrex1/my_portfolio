@@ -107,3 +107,9 @@ input[textarea] {
     font-size: 1.34rem;
   }
 }
+
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}
