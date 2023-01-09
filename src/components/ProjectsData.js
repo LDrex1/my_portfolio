@@ -48,10 +48,10 @@ const allProjects = [
     about: `A webApp where you can interact with a 3D canvas.`,
     resources: [
       "React Js,",
-      "Material UI",
-      "Three Js",
-      "React-three-fiber",
-      "React-drei",
+      "Material UI,",
+      "Three Js,",
+      "React-three-fiber,",
+      "React-drei,",
     ],
   },
   {
