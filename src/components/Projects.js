@@ -112,7 +112,7 @@ const Mask = styled.div`
   mix-blend-mode: multiply;
   visibility: hidden;
   filter: blur(9px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 1px rgba(203, 145, 84, 0.6);
   will-change: transform;
 `;
 //
@@ -293,6 +293,7 @@ const SiteImage = styled.div`
   background: url(${(props) => props.background}) no-repeat;
   background-position: 50% 0%;
   background-size: cover;
+  border-radius: 10px;
   width: 80vw;
   aspect-ratio: 1;
   text-align: center;
@@ -300,16 +301,13 @@ const SiteImage = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-  // outline: 2px solid red;
-  //
+  box-shadow: 0 0 1.2px 1px rgba(203, 145, 84, 0.6);
 
   @media ${device.mobileM} {
+    border-radius: 30px;
     width: 65vw;
   }
   @media ${device.mobileL} {
-    // flex: 0.9;
-    // max-width: 85vh;
     max-height: 85vh;
     animation: ${(props) =>
       props.toogle
