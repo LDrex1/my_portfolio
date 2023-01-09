@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/my_portfolio/static/css/main.a765cb27.css",
-    "main.js": "/my_portfolio/static/js/main.4112d80c.js",
-    "static/js/787.1ed0c42c.chunk.js": "/my_portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/Quotes.png": "/my_portfolio/static/media/Quotes.b5fcf39c31adeb68a802.png",
+    "main.css": "/my_portfolio/static/css/main.e14cd27a.css",
+    "main.js": "/my_portfolio/static/js/main.856de85b.js",
     "static/media/kimberly_hms.png": "/my_portfolio/static/media/kimberly_hms.561ae243aeec0d0c1dd1.png",
-    "static/media/utopia.png": "/my_portfolio/static/media/utopia.1691463a8cfa189c762f.png",
-    "static/media/cfuf.png": "/my_portfolio/static/media/cfuf.9d8a6a80831418c65094.png",
-    "static/media/getmyposts.png": "/my_portfolio/static/media/getmyposts.ff143bdb23cd751a6c76.png",
-    "static/media/finsweet.png": "/my_portfolio/static/media/finsweet.b72c601e413f75585e4f.png",
+    "static/media/Quotes.png": "/my_portfolio/static/media/Quotes.632d64e596db32c257e9.png",
+    "static/media/utopia.png": "/my_portfolio/static/media/utopia.a3aafd3eee96df1c7658.png",
+    "static/media/my_portfolio.png": "/my_portfolio/static/media/my_portfolio.19b181f547d5b83b3f32.png",
     "static/media/ME.png": "/my_portfolio/static/media/ME.3f127387d6227bcb8594.png",
+    "static/media/cfuf.png": "/my_portfolio/static/media/cfuf.790ca25a12f0a8407afb.png",
+    "static/media/canvas.png": "/my_portfolio/static/media/canvas.5b349c094c54853210d8.png",
     "static/media/bootstrap.png": "/my_portfolio/static/media/bootstrap.6f1ac66c7bafb4d489b4.png",
+    "static/media/getmyposts.png": "/my_portfolio/static/media/getmyposts.8eaf203586bd420fd404.png",
     "static/media/react-logo.png": "/my_portfolio/static/media/react-logo.29b0bc1077c1b43a5642.png",
+    "static/media/finsweet.png": "/my_portfolio/static/media/finsweet.8ba5a678c7dda0977833.png",
     "static/media/css-logo.png": "/my_portfolio/static/media/css-logo.37313b937e7a0028db6b.png",
     "static/media/threeJs-logo.png": "/my_portfolio/static/media/threeJs-logo.6d7ff628060d295cb9de.png",
     "static/media/javaScript-logo.png": "/my_portfolio/static/media/javaScript-logo.940765f470ddd506af04.png",
@@ -19,12 +20,11 @@
     "static/media/html-logo.png": "/my_portfolio/static/media/html-logo.a5f9c785cd4aa884b4b1.png",
     "static/media/firebase-logo.png": "/my_portfolio/static/media/firebase-logo.a4156cb67d6d0676cffc.png",
     "index.html": "/my_portfolio/index.html",
-    "main.a765cb27.css.map": "/my_portfolio/static/css/main.a765cb27.css.map",
-    "main.4112d80c.js.map": "/my_portfolio/static/js/main.4112d80c.js.map",
-    "787.1ed0c42c.chunk.js.map": "/my_portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.e14cd27a.css.map": "/my_portfolio/static/css/main.e14cd27a.css.map",
+    "main.856de85b.js.map": "/my_portfolio/static/js/main.856de85b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a765cb27.css",
-    "static/js/main.4112d80c.js"
+    "static/css/main.e14cd27a.css",
+    "static/js/main.856de85b.js"
   ]
 }
