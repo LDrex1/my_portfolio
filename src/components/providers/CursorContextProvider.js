@@ -7,7 +7,7 @@ function CursorContextProvider({ children }) {
   const [mousePos, setMousePos] = useState({ clientX: null, clientY: null });
   const { clientX, clientY } = mousePos;
   /**
-   * cursorTypes may be [work, link, firstVh, footer]
+   * cursorTypes may be [work, link, firstpage, footer]
    */
   const [cursorType, setCursorType] = useState("");
 
@@ -24,7 +24,11 @@ function CursorContextProvider({ children }) {
   return (
     <>
       <CursorContext.Provider value={{ cursorType, setCursorType }}>
-        <DivAbs className={cursorType} clientX={clientX} clientY={clientY}>
+        <DivAbs
+          className={`cursor ${cursorType}`}
+          clientX={clientX}
+          clientY={clientY}
+        >
           <Div></Div>
         </DivAbs>
         {children}
