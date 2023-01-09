@@ -55,6 +55,7 @@ function Projects() {
               onMouseLeave={handleMouseLeave}
             >
               <Mask></Mask>
+              <ProjTitle>{project.name}</ProjTitle>
               <ResourcesDup toogle={isActive[index]}>
                 {project.resources.join(" ")}
               </ResourcesDup>
@@ -243,6 +244,12 @@ const ResourcesDup = styled.p`
   font-size: 20px;
   z-index: 2;
   display: ${(props) => (props.toogle ? "none" : "block")};
+`;
+
+const ProjTitle = styled(ResourcesDup)`
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
 `;
 //
 
