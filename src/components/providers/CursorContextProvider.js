@@ -69,6 +69,6 @@ const DivAbs = styled(Div)`
     background: #555555;
   }
   &.work {
-    background: ##ffce99;
+    background: #ffce99;
   }
 `;
