@@ -13,6 +13,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.1rem;
+}
+
+::-webkit-scrollbar:active {
+  opacity: 0.4;
+}
+/* #ffb566,
+#ffcc99 
+*/
+::-webkit-scrollbar-track {
+  background: linear-gradient(#f5dcc2, white, #f5dcc2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #663500;
+  border-radius: 0.3rem;
+}
+
 h1,
 h2,
 h3,
