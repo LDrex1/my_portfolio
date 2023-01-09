@@ -108,8 +108,8 @@ input[textarea] {
   }
 }
 
-@media (hover: none) {
+@media (hover: none), (pointer: coarse) {
   .cursor {
-    display: none;
+    display: none !important;
   }
 }
