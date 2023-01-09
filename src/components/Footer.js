@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import ConnectTemp from "./ConnectTemp";
+import { CursorContext } from "./providers/CursorContextProvider";
 
 function Footer() {
+  const { setCursorType } = useContext(CursorContext);
+
+  const handleMouseEnter = () => {
+    console.log("first");
+    setCursorType("footer");
+  };
+  const handleMouseLeave = () => {
+    setCursorType("");
+  };
   return (
-    <Container>
+    <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <ConnectTemp />
       <Copyright>&copy;2022</Copyright>
     </Container>

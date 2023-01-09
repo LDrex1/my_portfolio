@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRef } from "react";
 import styled from "styled-components";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -6,18 +6,33 @@ import myself from "../images/ME.png";
 import Skills from "./Skills";
 import { device } from "./Device";
 import email from "../assets/lottie-animations/lf30_editor_8lz4cyp1.json";
+import { CursorContext } from "./providers/CursorContextProvider";
 
 function Abiola() {
+  const { setCursorType } = useContext(CursorContext);
   const lottieEmail = useRef();
 
   function mouseEnter() {
     lottieEmail.current.play();
   }
 
+  const handleMouseEnter = () => {
+    console.log("first");
+    setCursorType("first-page");
+  };
+
+  const handleMouseLeave = () => {
+    setCursorType("");
+  };
+
   return (
     //
-    <Card className="personal">
-      <Image className="myself"></Image>
+    <Card
+      className="personal"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Image className="myself" aria-label="A picture of myself"></Image>
 
       <Details className="details">
         <CardTitle className="card-title">
@@ -63,6 +78,7 @@ const Card = styled.div`
   justify-content: center;
   color: #663500;
   padding-top: 1.2rem;
+  position: relative;
 
   @media ${device.mobileS} {
     padding-bottom: 12vh;
