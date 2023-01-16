@@ -42,7 +42,7 @@ const allProjects = [
     name: "3D World",
     image: require("../images/canvas.png"),
     links: {
-      live: "https://ldrex1.github.io/Rhtyhm/",
+      live: "https://ldrex1.github.io/Rhythm/",
       gitHub: "https://github.com/LDrex1/Rhythm",
     },
     about: `A webApp where you can interact with a 3D canvas.`,
