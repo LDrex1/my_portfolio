@@ -46,6 +46,13 @@ const Div = styled("span")`
   background: #666666;
   width: 8px;
   height: 8px;
+  //   -webkit-transition-duration: 10ms;
+  //   transition-duration: 10ms;
+  //   transition-delay: 0ms;
+  //   -webkit-transition-timing-function: linear;
+  //   transition-timing-function: linear;
+  will-change: width, height, transform, border;
+  pointer-events: none;
 `;
 
 const DivAbs = styled(Div)`
@@ -59,13 +66,6 @@ const DivAbs = styled(Div)`
   align-items: center;
   width: 20px;
   height: 20px;
-  -webkit-transition-duration: 90ms;
-  transition-duration: 90ms;
-  transition-delay: 0ms;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  will-change: width, height, transform, border;
-  pointer-events: none;
 
   &.footer {
     background: #666666;
