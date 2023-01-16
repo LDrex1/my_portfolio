@@ -8,6 +8,8 @@ const allProjects = [
     links: {
       live: "https://ldrex1.github.io/HMS/",
       gitHub: "https://github.com/LDrex1/HMSF",
+      figma:
+        "https://www.figma.com/file/mpD0pZz2tDQQ17zij1ym3Z/KodeCamp-HMS-team-Workspace",
     },
     about: `A hotel management system website created by a team of web developers. I single-handedly 
                 implemented the landing-page, reservation-bookings, reservation-summary, and card-input
@@ -33,6 +35,8 @@ const allProjects = [
     links: {
       live: "https://ldrex1.github.io/mechanic/",
       gitHub: "https://github.com/LDrex1/mechanic",
+      figma:
+        "https://www.figma.com/file/wCWfqsebDx4A1lK5VVZNSN/Client-first-Template-6-(Community)-(Copy)?node-id=482%3A447&t=FxQnWwnvPsSahJ2j-0",
     },
     about:
       "A multipaged website on an automobile repair company based on an existing figma design. All pages are fully responsive.",
