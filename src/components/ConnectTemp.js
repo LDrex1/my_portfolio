@@ -30,7 +30,6 @@ function ConnectTemp() {
             icon={faGithub}
             size="2x"
             onClick={() => window.open("https://github.com/LDrex1")}
-            style={{ cursor: "pointer" }}
           ></FontAwesomeIcon>
         </MediaGroup>
       </MediaDiv>
