@@ -17,7 +17,6 @@ function Abiola() {
   }
 
   const handleMouseEnter = () => {
-    console.log("first");
     setCursorType("first-page");
   };
 
