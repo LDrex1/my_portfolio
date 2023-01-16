@@ -43,7 +43,7 @@ function Projects() {
         /**
          * Destructuring the links in (Sites)
          */
-        const { live, gitHub } = project.links;
+        const { live, gitHub, figma } = project.links;
         return (
           <Work>
             <SiteImage
@@ -67,9 +67,22 @@ function Projects() {
               <AboutPar>{project.about}</AboutPar>
 
               <Links>
-                <LiveSite href={live}>LiveSite</LiveSite>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    paddingRight: "10px",
+                  }}
+                >
+                  <Site href={live}>LiveSite</Site>
+                  {figma && (
+                    <Site className="figma" href={figma}>
+                      FigmaLink
+                    </Site>
+                  )}
+                </div>
                 <VerBorder></VerBorder>
-                <GithubLink href={gitHub}>GithubLink</GithubLink>
+                <Site href={gitHub}>GitHubLink</Site>
               </Links>
             </About>
           </Work>
@@ -260,7 +273,7 @@ const Resources = styled.p`
 //
 
 const Links = styled.div`
-  margin-top: auto;
+  margin-top: 10px;
   margin-bottom: 2px;
   text-align: start;
   display: flex;
@@ -272,7 +285,7 @@ const Links = styled.div`
 `;
 //
 
-const LiveSite = styled.a`
+const Site = styled.a`
   width: fit-content;
   padding: 10px;
   text-decoration: none;
@@ -281,12 +294,14 @@ const LiveSite = styled.a`
   background: black;
   color: whitesmoke;
   border: 2px solid whitesmoke;
+
+  &.figma {
+    margin-left: 15px;
+  }
 `;
 //
 
 const VerBorder = styled.div``;
-
-const GithubLink = styled(LiveSite)``;
 //
 
 const SiteImage = styled.div`
