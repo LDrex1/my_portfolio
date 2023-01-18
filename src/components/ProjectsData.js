@@ -7,7 +7,7 @@ const allProjects = [
     image: require("../images/kimberly_hms.png"),
     links: {
       live: "https://ldrex1.github.io/HMS/",
-      gitHub: "https://github.com/LDrex1/HMSF",
+      gitHub: "https://github.com/LDrex1/HMS",
       figma:
         "https://www.figma.com/file/mpD0pZz2tDQQ17zij1ym3Z/KodeCamp-HMS-team-Workspace",
     },
