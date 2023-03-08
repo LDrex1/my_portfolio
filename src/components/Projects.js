@@ -99,8 +99,8 @@ export default Projects;
 
 /** Styles for all the Classes */
 const Work = styled.div`
-  background: radial-gradient(white 10%, #ffcc99 75%, chocolate 85%);
-  border-radius: 30px;
+  background: radial-gradient(white 10%, #ffcc99 75%, chocolate 93%);
+  border-radius: 20px;
   width: 100%;
   min-height: 60vh;
   display: flex;
@@ -108,6 +108,11 @@ const Work = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px 0 15px 8px;
+
+  @media ${device.mobileM} {
+    background: radial-gradient(white 10%, #ffcc99 75%, chocolate 85%);
+    border-radius: 30px;
+  }
 
   @media ${device.mobileL} {
     padding: 0;
@@ -249,6 +254,10 @@ const About = styled.div`
 
 const AboutPar = styled.p`
   margin: calc(3px + 2vw) 0 calc(2px + 1vw) 2vw;
+
+  @media ${device.mobileM} {
+    width: 94%;
+  }
 `;
 
 //
