@@ -74,7 +74,9 @@ function Projects() {
                     paddingRight: "10px",
                   }}
                 >
-                  <Site href={live}>LiveSite</Site>
+                  <Site href={live} target={"_blank"}>
+                    LiveSite
+                  </Site>
                   {figma && (
                     <Site className="figma" href={figma}>
                       FigmaLink
